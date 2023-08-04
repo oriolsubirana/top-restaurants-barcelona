@@ -8,10 +8,6 @@ const links = [{
 {
     label: 'About',
     route: '/about'
-},
-{
-    label: 'Restaurants',
-    route: '/restaurants'
 }]
 
 export function Header() {

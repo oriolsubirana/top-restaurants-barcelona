@@ -1,4 +1,4 @@
-import { ListOfRestaurants } from "./ListOfRestaurants"
+import { ListOfRestaurants } from "../../components/list/ListOfRestaurants"
 
 export default async function Restaurants() {
     return (

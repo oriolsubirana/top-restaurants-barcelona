@@ -1,5 +1,9 @@
-export default function Home() {
+import { ListOfRestaurants } from "../components/list/ListOfRestaurants"
+
+export default async function Home() {
   return (
-    <h1>Esto es la home</h1>
+    <section>
+      <ListOfRestaurants />
+    </section>
   )
 }
