@@ -7,6 +7,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import ReceiptIcon from '@mui/icons-material/Receipt';
+import styles from './ListOfRestaurants.module.css';
 
 const fetchRestaurants = () => {
   return fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -59,7 +60,7 @@ export async function ListOfRestaurants() {
                     </Typography>
                   </Box>
                 </Box>
-                <CardContent>
+                <CardContent className={styles.cardContent}>
                   <Typography
                     sx={{ display: 'flex', alignItems: 'center' }}
                     variant='h6'

@@ -22,7 +22,7 @@ const themeOptions: ThemeOptions = {
       default: '#FFFFFF',
     },
     primary: {
-      main: '#2e3a23',
+      main: '#af4d5a',
     },
     text: {
       primary: '#000000',
