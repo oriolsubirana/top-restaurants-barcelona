@@ -5,9 +5,9 @@ import CardMedia from '@mui/material/CardMedia';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import ReceiptIcon from '@mui/icons-material/Receipt';
 import styles from './ListOfRestaurants.module.css';
+import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
+import Link from 'next/link';
 
 const fetchRestaurants = () => {
   return fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -24,20 +24,12 @@ export async function ListOfRestaurants() {
     <main>
       <Container sx={{ py: 8 }} maxWidth='md'>
         <Grid container spacing={4}>
-          {restaurants.slice(0, 9).map((restaurant: IRestaurant) => (
+          {restaurants.slice(0, 27).map((restaurant: IRestaurant) => (
             <Grid item key={restaurant.id} xs={12} sm={6} md={4}>
-              <Card
-                sx={{
-                  height: '100%',
-                  display: 'flex',
-                  flexDirection: 'column',
-                }}
-              >
+              <Card className={styles.card}>
                 <Box sx={{ position: 'relative' }}>
                   <CardMedia
-                    component='div'
                     sx={{
-                      // 16:9
                       pt: '56.25%',
                     }}
                     image='https://source.unsplash.com/random?wallpapers'
@@ -46,7 +38,7 @@ export async function ListOfRestaurants() {
                     sx={{
                       position: 'absolute',
                       left: 0,
-                      top: '20%',
+                      top: '30%',
                       width: '100%',
                       color: 'white',
                       padding: '10px',
@@ -56,19 +48,23 @@ export async function ListOfRestaurants() {
                       Healthy Poke
                     </Typography>
                     <Typography variant='body2' align='center'>
-                      Saludable
+                      Healthy
                     </Typography>
                   </Box>
                 </Box>
                 <CardContent className={styles.cardContent}>
-                  <Typography
-                    sx={{ display: 'flex', alignItems: 'center' }}
-                    variant='h6'
-                    component='h3'
-                  >
-                    <FavoriteBorderIcon />
-                    1.5K
-                  </Typography>
+                  <div className={styles.rating}>
+                    <ThumbUpOffAltIcon fontSize='medium' />
+                    <span className={styles.ratingLabel}>300</span>
+                  </div>
+                  <div className={styles.topPrice}>
+                    <div className={styles.top}>
+                      <div className={styles.topInfo}>TOP HEALTHY</div>
+                    </div>
+                    <div className={styles.price}>
+                      <div className={styles.priceInfo}>€€</div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             </Grid>
