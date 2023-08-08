@@ -1,0 +1,30 @@
+.header {
+    border: 1px solid #f0f0f0;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+.navigation {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.navigation a:hover {
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
+.logo {
+    height: auto;
+    max-width: 170px;
+    width: 100%;
+}
+
+.toolBar {
+    grid-gap: 16px;
+    align-items: center;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: minmax(max-content,1fr) minmax(0,406px) minmax(min-content,1fr);
+}

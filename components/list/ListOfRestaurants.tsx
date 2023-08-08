@@ -7,7 +7,6 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import styles from './ListOfRestaurants.module.css';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
-import Link from 'next/link';
 
 const fetchRestaurants = () => {
   return fetch('https://jsonplaceholder.typicode.com/posts', {
