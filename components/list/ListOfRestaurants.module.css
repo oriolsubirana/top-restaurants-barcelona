@@ -20,6 +20,56 @@
     overflow: hidden;
 }
 
+.cardImage {
+    backface-visibility: hidden;
+    height: 156px;
+    overflow: hidden;
+    position: relative;
+    transform: translateZ(0);
+}
+
+.cardOverlay {
+    align-items: center;
+    color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.cardTitle {
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.14;
+    margin: 0;
+    padding: 0 12 18;
+    text-align: center;
+    text-shadow: 0 1px 4px rgba(0,0,0,.6)
+}
+
+.filterContainer {
+    display: flex;
+    gap: 8px;
+}
+
+.filter {
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+    padding: 2px 4px;
+    align-items: center;
+    background-color: rgba(0,0,0,.4);
+    display: flex;
+    gap: 4px;
+}
+
 .rating {
     display: flex;
     line-height: 1.4;

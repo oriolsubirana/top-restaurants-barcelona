@@ -26,31 +26,18 @@ export async function ListOfRestaurants() {
           {restaurants.slice(0, 27).map((restaurant: IRestaurant) => (
             <Grid item key={restaurant.id} xs={12} sm={6} md={4}>
               <Card className={styles.card}>
-                <Box sx={{ position: 'relative' }}>
-                  <CardMedia
-                    sx={{
-                      pt: '56.25%',
-                    }}
-                    image='https://source.unsplash.com/random?wallpapers'
-                  />
-                  <Box
-                    sx={{
-                      position: 'absolute',
-                      left: 0,
-                      top: '30%',
-                      width: '100%',
-                      color: 'white',
-                      padding: '10px',
-                    }}
-                  >
-                    <Typography variant='h4' align='center'>
-                      Healthy Poke
-                    </Typography>
-                    <Typography variant='body2' align='center'>
-                      Healthy
-                    </Typography>
-                  </Box>
-                </Box>
+                <CardMedia
+                  className={styles.cardImage}
+                  image='https://source.unsplash.com/random?wallpapers'
+                >
+                  <div className={styles.cardOverlay}>
+                    <h3 className={styles.cardTitle}>Macchina Pasta Bar</h3>
+                    <div className={styles.filterContainer}>
+                      <h3 className={styles.filter}>Desayuno</h3>
+                      <h3 className={styles.filter}>Snacks</h3>
+                    </div>
+                  </div>
+                </CardMedia>
                 <CardContent className={styles.cardContent}>
                   <div className={styles.rating}>
                     <ThumbUpOffAltIcon fontSize='medium' />
@@ -58,7 +45,7 @@ export async function ListOfRestaurants() {
                   </div>
                   <div className={styles.topPrice}>
                     <div className={styles.top}>
-                      <div className={styles.topInfo}>TOP HEALTHY</div>
+                      <div className={styles.topInfo}>TOP DESAYUNO</div>
                     </div>
                     <div className={styles.price}>
                       <div className={styles.priceInfo}>€€</div>
